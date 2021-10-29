@@ -1,0 +1,12 @@
+**.o
+**.a
+**.d
+**.swp
+**.dSYM
+
+obj/
+dep/
+
+a.out
+.DS_Store
+error
