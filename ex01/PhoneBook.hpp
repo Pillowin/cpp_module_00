@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 16:24:00 by agautier          #+#    #+#             */
-/*   Updated: 2021/10/30 22:49:49 by agautier         ###   ########.fr       */
+/*   Updated: 2021/10/31 01:11:28 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ class PhoneBook
 		bool get_cmd(void);
 
 	private:
-		uint8_t index;
-		Contact contacts[8];
+		uint8_t _index;
+		Contact _contacts[8];
 
-		bool cmd_exit(void) const;
-		bool cmd_add(void);
-		bool cmd_search(void);
-		bool cmd_unknow(void) const;
+		bool _cmd_exit(void) const;
+		bool _cmd_add(void);
+		bool _cmd_search(void);
+		bool _cmd_unknow(void) const;
 };
 
 #endif
