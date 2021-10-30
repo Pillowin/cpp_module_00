@@ -6,7 +6,7 @@
 #    By: agautier <agautier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/29 14:49:12 by agautier          #+#    #+#              #
-#    Updated: 2021/10/29 15:05:05 by agautier         ###   ########.fr        #
+#    Updated: 2021/10/30 20:23:21 by agautier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ DEP			=	$(SRC:$S%.cpp=$D%.d)
 CXX			=	c++
 
 CXXFLAGS	+=	-I$I
-CXXFLAGS	+=	-Wall -Wextra -Werror -std=c++98
+CXXFLAGS	+=	-Wall -Wextra -Werror -std=c++98 -pedantic-errors
 CXXFLAGS	+=	-g3 -fsanitize=address
 
 LDFLAGS		+=	-g3 -fsanitize=address
@@ -57,7 +57,7 @@ $(NAME): $(OBJ)
 	$(CXX) $(LDFLAGS) $^ -o $@
 
 clean:
-	$(RM) $(wildcard $(OBJ))
+	$(RMDIR) $(wildcard $(NAME).dSYM)
 	$(RMDIR) $O
 	$(RM) $(wildcard $(DEP))
 	$(RMDIR) $D
