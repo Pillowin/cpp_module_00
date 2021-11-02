@@ -6,7 +6,7 @@
 #    By: agautier <agautier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/29 14:49:12 by agautier          #+#    #+#              #
-#    Updated: 2021/10/30 20:23:21 by agautier         ###   ########.fr        #
+#    Updated: 2021/11/02 15:09:35 by agautier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,8 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean all
+re: fclean
+	$(MAKE)
 
 -include $(DEP)
 
