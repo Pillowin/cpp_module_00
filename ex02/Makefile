@@ -6,11 +6,11 @@
 #    By: agautier <agautier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/29 11:37:11 by agautier          #+#    #+#              #
-#    Updated: 2021/10/30 20:02:51 by agautier         ###   ########.fr        #
+#    Updated: 2021/11/04 20:22:23 by agautier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	phonebook
+NAME	=	first_task
 SRC		=	$(wildcard *.cpp)
 
 include ../template.mk
