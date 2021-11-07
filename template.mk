@@ -6,7 +6,7 @@
 #    By: agautier <agautier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/29 14:49:12 by agautier          #+#    #+#              #
-#    Updated: 2021/11/02 15:09:35 by agautier         ###   ########.fr        #
+#    Updated: 2021/11/05 15:41:46 by agautier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,9 +26,6 @@ CXX			=	c++
 
 CXXFLAGS	+=	-I$I
 CXXFLAGS	+=	-Wall -Wextra -Werror -std=c++98 -pedantic-errors
-CXXFLAGS	+=	-g3 -fsanitize=address
-
-LDFLAGS		+=	-g3 -fsanitize=address
 
 RM			=	/bin/rm -f
 RMDIR		=	/bin/rm -Rf

@@ -6,7 +6,7 @@
 /*   By: agautier <agautier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 16:25:58 by agautier          #+#    #+#             */
-/*   Updated: 2021/10/31 01:25:59 by agautier         ###   ########.fr       */
+/*   Updated: 2021/11/07 14:49:34 by agautier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ bool	PhoneBook::_cmd_exit(void) const
 */
 bool	PhoneBook::_cmd_search(void)
 {
-	uint32_t	index = UINT32_MAX;
+	uint8_t	index = UINT8_MAX;
 	std::string	s;
 
 	if (!this->_index)
@@ -112,16 +112,13 @@ bool	PhoneBook::_cmd_search(void)
 	while (index >= this->_index)
 	{
 		std::cout << "Please type an index." << std::endl;
-		if (!std::getline(std::cin, s))
+		if (!getline(std::cin, s))
 		{
 			std::cerr << "exit" << std::endl;
 			return (false);
 		}
-		try {
-			index = std::stoul(s);
-		} catch (const std::invalid_argument e) {
-			continue ;
-		}
+		if (s.length())
+			index = s.at(0) - '0';
 	}
 	this->_contacts[index].print_infos();
 	return (true);
